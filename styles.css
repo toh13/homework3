@@ -1,0 +1,159 @@
+/* Global Styles */
+body {
+    background-color: #064420; /* Dark Green Background */
+    color: rgb(255, 97, 6); /* White text */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Layout using Grid */
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "nav main main"
+        "footer footer footer";
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 100px;
+}
+
+/* Header */
+header {
+    grid-area: header;
+    background-color: #5C4033; /* Dark Brown */
+    padding: 20px;
+    color: rgba(18, 53, 20, 0.829);
+    text-align: center;
+}
+
+/* Sidebar */
+.sidebar {
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Make sure the nav and button do not overlap */
+    background-color: #083D17; /* Slightly lighter green for sidebar */
+    padding: 20px;
+    position: relative;
+    height: 100%;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255); /* White text for sidebar links */
+}
+
+/* Adjusted positioning for the download button */
+.download-btn {
+    margin-top: 20px;
+    background-color: #5C4033; /* Dark Brown for buttons */
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    align-self: flex-start;
+}
+
+.download-btn:hover {
+    background-color: #4E352A; /* Slightly lighter dark brown on hover */
+}
+
+main {
+    grid-area: main;
+    padding: 20px;
+    overflow-y: scroll;
+}
+
+/* Footer */
+.footer {
+    grid-area: footer;
+    background-color: #5C4033; /* Dark Brown */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Change the color of links in the footer to green */
+.footer a {
+    color: #A3D977; /* Light Green for footer links */
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Flexbox for Skills Section */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.skill-item {
+    background-color: #083D17; /* Slightly lighter green for skill items */
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+/* Project Section with Grid */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.project-item {
+    padding: 20px;
+    background-color: #083D17; /* Slightly lighter green for project items */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.project-item img {
+    max-width: 100%; /* Ensure the image fits within its container */
+    height: auto;    /* Maintain the aspect ratio of the image */
+    border-radius: 5px; /* Optional: round the corners of the image */
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+/* Styling for Summary, Education, Experience Sections */
+.summary, .education, .experience {
+    font-size: 1.2rem;
+    margin: 250px 0;
+    padding: 250px;
+    color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+    color: white;
+}
+
+th {
+    background-color: #5C4033; /* Dark brown for table headers */
+}
